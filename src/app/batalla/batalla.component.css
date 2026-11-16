@@ -1,20 +1,126 @@
-:host { display: block; max-width: 760px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; }
-h2 { text-align: center; color: #1d4ed8; }
-.buscadores { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
-label { display: block; font-weight: bold; margin-bottom: 4px; }
-input { padding: 8px; border: 2px solid #cbd5e1; border-radius: 6px; }
-button { padding: 8px 14px; border: 0; border-radius: 6px; background-color: #2563eb; color: #ffffff; cursor: pointer; }
-button:hover { background-color: #1d4ed8; }
-button:disabled { background-color: #94a3b8; cursor: not-allowed; }
-.tarjetas { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 20px; }
-.tarjeta { width: 300px; padding: 16px; text-align: center; background-color: #ffffff; border: 2px solid #cbd5e1; border-radius: 10px; }
-.tarjeta h3 { text-transform: capitalize; margin-top: 0; }
-.tarjeta img { width: 120px; height: 120px; }
-.barra { height: 14px; background-color: #e2e8f0; border-radius: 7px; overflow: hidden; }
-.vida { height: 100%; background-color: #16a34a; transition: width 0.4s; }
-.acciones { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
-.cargando { text-align: center; color: #1d4ed8; font-weight: bold; }
-.error { padding: 10px; color: #991b1b; background-color: #fee2e2; border-radius: 6px; text-align: center; }
-.aviso { text-align: center; color: #64748b; }
-.registro { margin-top: 20px; padding: 12px; background-color: #f1f5f9; border-radius: 8px; }
-.registro p { margin: 4px 0; }
+:host {
+    display: block;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #1d4ed8;
+}
+
+.buscadores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+input {
+    padding: 8px;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+button {
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    width: 300px;
+    padding: 16px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+}
+
+.tarjeta h3 {
+    text-transform: capitalize;
+    margin-top: 0;
+}
+
+.tarjeta img {
+    width: 120px;
+    height: 120px;
+}
+
+.barra {
+    height: 14px;
+    background-color: #e2e8f0;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.vida {
+    height: 100%;
+    background-color: #16a34a;
+    transition: width 0.4s;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cargando {
+    text-align: center;
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+.error {
+    padding: 10px;
+    color: #991b1b;
+    background-color: #fee2e2;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.aviso {
+    text-align: center;
+    color: #64748b;
+}
+
+.registro {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+}
+
+.registro p {
+    margin: 4px 0;
+}

@@ -5,7 +5,7 @@
 **Práctica 02:** Desarrollo de una aplicación web interactiva con Angular y PokéAPI
 
 ## Propósito
-Aplicación que permite elegir dos Pokémon, consultar sus estadísticas y simular una batalla por turnos. Las reglas de combate las implementa la aplicación; PokéAPI solo entrega los datos.
+Aplicación que permite elegir dos Pokémon, consultar sus estadísticas y simular una batalla por turnos. Las reglas de combate son basicas de acuerdo a las habilidades de los 2 pokemon; PokéAPI solo entrega los datos.
 
 ## Funcionalidades
 - Búsqueda de dos Pokémon por nombre (botón o tecla Enter).
@@ -21,7 +21,7 @@ Aplicación que permite elegir dos Pokémon, consultar sus estadísticas y simul
 | `GET /move/{nombre}` | Poder y tipo del movimiento usado en el ataque |
 | `GET /type/{nombre}` | Efectividad: doble, mitad o cero daño según el tipo del rival |
 
-Base: `https://pokeapi.co/api/v2`
+Base informacion de los Pokemons: `https://pokeapi.co/api/v2`
 
 ## Ejecución local
 ```
@@ -31,4 +31,5 @@ ng serve
 Abrir `http://localhost:4200`.
 
 ## Sitio desplegado (Vercel)
-URL: _pegar aquí la URL pública de Vercel_
+URL: https://practica02-1-pokemon.vercel.app/
+
