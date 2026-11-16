@@ -1,0 +1,62 @@
+<h2>Simulador de batallas Pokémon</h2>
+
+<div class="buscadores">
+  <div>
+    <label for="p1">Pokémon 1</label>
+    <input id="p1" type="text" [(ngModel)]="nombre1" placeholder="Ej.: pikachu" (keyup.enter)="buscar(1)">
+    <button type="button" (click)="buscar(1)" [disabled]="cargando">Buscar</button>
+  </div>
+  <div>
+    <label for="p2">Pokémon 2</label>
+    <input id="p2" type="text" [(ngModel)]="nombre2" placeholder="Ej.: charmander" (keyup.enter)="buscar(2)">
+    <button type="button" (click)="buscar(2)" [disabled]="cargando">Buscar</button>
+  </div>
+</div>
+
+@if (cargando) {
+  <p class="cargando">Cargando datos de PokéAPI...</p>
+}
+@if (error) {
+  <p class="error">{{ error }}</p>
+}
+
+<div class="tarjetas">
+  @if (jugador1) {
+    <div class="tarjeta">
+      <h3>{{ jugador1.nombre }}</h3>
+      <img [src]="jugador1.imagen" [alt]="jugador1.nombre">
+      <p>Tipo: {{ jugador1.tipos.join(', ') }}</p>
+      <p>Ataque: {{ jugador1.ataque }} · Defensa: {{ jugador1.defensa }} · Velocidad: {{ jugador1.velocidad }}</p>
+      <div class="barra"><div class="vida" [style.width.%]="porcentaje(vida1, jugador1)"></div></div>
+      <p>Vida: {{ vida1 }}</p>
+    </div>
+  }
+  @if (jugador2) {
+    <div class="tarjeta">
+      <h3>{{ jugador2.nombre }}</h3>
+      <img [src]="jugador2.imagen" [alt]="jugador2.nombre">
+      <p>Tipo: {{ jugador2.tipos.join(', ') }}</p>
+      <p>Ataque: {{ jugador2.ataque }} · Defensa: {{ jugador2.defensa }} · Velocidad: {{ jugador2.velocidad }}</p>
+      <div class="barra"><div class="vida" [style.width.%]="porcentaje(vida2, jugador2)"></div></div>
+      <p>Vida: {{ vida2 }}</p>
+    </div>
+  }
+</div>
+
+@if (jugador1 && jugador2) {
+  <div class="acciones">
+    <button type="button" (click)="jugarTurno()" [disabled]="cargando || terminada">Jugar turno</button>
+    <button type="button" (click)="reiniciarBatalla()" [disabled]="cargando">Reiniciar batalla</button>
+  </div>
+} @else {
+  <p class="aviso">Busca dos Pokémon para comenzar la batalla.</p>
+}
+
+@if (registro.length > 0) {
+  <div class="registro">
+    <h3>Historial</h3>
+    @for (linea of registro; track $index) {
+      <p>{{ linea }}</p>
+    }
+  </div>
+}

@@ -1,27 +1,34 @@
-# MiProyectoAngular
+# Simulador de batallas Pokémon (Angular + PokéAPI)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+**Autor:** Steven Chimbo
+**Asignatura:** Programación y Plataformas Web – UPS
+**Práctica 02:** Desarrollo de una aplicación web interactiva con Angular y PokéAPI
 
-## Development server
+## Propósito
+Aplicación que permite elegir dos Pokémon, consultar sus estadísticas y simular una batalla por turnos. Las reglas de combate las implementa la aplicación; PokéAPI solo entrega los datos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Funcionalidades
+- Búsqueda de dos Pokémon por nombre (botón o tecla Enter).
+- Tarjeta con imagen, tipos, ataque, defensa, velocidad y barra de vida.
+- Batalla por turnos: ataca primero el más rápido; cada ataque usa un movimiento al azar con poder.
+- El daño depende del poder del movimiento, ataque/defensa y la efectividad entre tipos.
+- Historial de la batalla, botón de reiniciar y mensajes de carga y error.
 
-## Code scaffolding
+## Endpoints de PokéAPI utilizados
+| Endpoint | Uso en la aplicación |
+|---|---|
+| `GET /pokemon/{nombre}` | Estadísticas, tipos, imagen y lista de movimientos |
+| `GET /move/{nombre}` | Poder y tipo del movimiento usado en el ataque |
+| `GET /type/{nombre}` | Efectividad: doble, mitad o cero daño según el tipo del rival |
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Base: `https://pokeapi.co/api/v2`
 
-## Build
+## Ejecución local
+```
+npm install
+ng serve
+```
+Abrir `http://localhost:4200`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Sitio desplegado (Vercel)
+URL: _pegar aquí la URL pública de Vercel_
